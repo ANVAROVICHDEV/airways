@@ -1,0 +1,47 @@
+.text {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 120px;
+
+    .text_data {
+      width: 48%;
+      h3 {
+        color: var(--2-darajali, #1f1f1f);
+
+        /* S 2 */
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      p{
+        margin-top: 20px;
+        color: var(--2-darajani-2chisi, #555);
+
+        /* assiy 3 */
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+      }
+    }
+    .text_date {
+      width: 48%;
+      text-align: end;
+      h3 {
+        color: var(--2-darajali, #1f1f1f);
+
+        /* S 2 */
+        font-family: Inter;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+   
+    }
+  }

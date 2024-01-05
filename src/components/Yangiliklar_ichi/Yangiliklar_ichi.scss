@@ -1,0 +1,177 @@
+.Yangiliklar_ichi {
+  width: 100%;
+  height: auto;
+  padding: 0px 100px;
+
+  .back {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+
+    .a {
+      color: black;
+    }
+    a {
+      color: var(--2-darajani-2chisi, #555);
+
+      /* S 5 */
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 25.2px */
+    }
+  }
+
+ 
+
+  
+}
+
+
+@media screen and (max-width:447px) {
+    .Yangiliklar_ichi {
+        padding: 0px 20px;
+      
+        .back {
+      
+          a {
+            font-size: 12px;
+          }
+        }
+      
+        .img {
+          width: 100%;
+        }
+      
+        .text {
+          justify-content: center;
+          padding: 20px 00px;
+      
+          .text_data {
+            width: 100%;
+            h3 {
+              font-size: 25px;
+            }
+            p{
+              margin-top: 20px;
+              font-size: 14px;
+            }
+          }
+          .text_date {
+            display: none;
+          }
+        }
+      }
+}
+
+@media screen and (min-width:447px) and (max-width:769px) {
+    .Yangiliklar_ichi {
+        padding: 0px 20px;
+      
+        .back {
+      
+          a {
+            font-size: 12px;
+          }
+        }
+      
+        .img {
+          width: 100%;
+        }
+      
+        .text {
+          justify-content: center;
+          padding: 20px 00px;
+      
+          .text_data {
+            width: 100%;
+            h3 {
+              font-size: 25px;
+            }
+            p{
+              margin-top: 20px;
+              font-size: 14px;
+            }
+          }
+          .text_date {
+            display: none;
+          }
+        }
+      }
+}
+
+
+@media screen and (min-width:769px) and (max-width:990px) {
+    .Yangiliklar_ichi {
+        padding: 0px 50px;
+      
+        .back {
+      
+          a {
+            font-size: 15px;
+          }
+        }
+      
+        .img {
+          width: 100%;
+        }
+      
+        .text {
+          justify-content: center;
+          padding: 20px 00px;
+      
+          .text_data {
+            width: 100%;
+            h3 {
+              font-size: 27px;
+            }
+            p{
+              margin-top: 20px;
+              font-size: 16px;
+            }
+          }
+          .text_date {
+            display: none;
+          }
+        }
+      }
+}
+
+@media screen and (min-width:990px) and (max-width:1200px) {
+    .Yangiliklar_ichi {
+        padding: 0px 50px;
+      
+        .back {
+      
+          a {
+            font-size: 17px;
+          }
+        }
+      
+        .img {
+          width: 100%;
+        }
+      
+        .text {
+          justify-content: center;
+          padding: 20px 00px;
+      
+          .text_data {
+            width: 100%;
+            h3 {
+              font-size: 29px;
+            }
+            p{
+              margin-top: 20px;
+              font-size: 19px;
+            }
+          }
+          .text_date {
+            display: none;
+          }
+        }
+      }
+}
+

@@ -1,0 +1,283 @@
+.Yangiliklar_Boxes {
+  width: 100%;
+  height: auto;
+  padding: 60px 220px;
+  display: flex;
+  justify-content: space-between;
+  .box {
+    width: 49%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      width: 100%;
+      transition: all ease 0.3s;
+    }
+    .text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      flex-wrap: wrap;
+      left: 0;
+      top: 0;
+      padding: 30px;
+      border-radius: 18px;
+      background: var(
+        --aaaaa,
+        linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(108, 108, 108, 0) 100%
+        )
+      );
+
+      .text_info {
+        width: 60%;
+        height: auto;
+
+        text-align: start;
+        h3 {
+          color: #fff;
+
+          /* S3 */
+          font-family: Inter;
+          font-size: 23px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%; /* 36.4px */
+        }
+
+        p {
+          color: var(--5-assosiy, #fbfbfb);
+
+          font-family: Inter;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin-top: 20px;
+        }
+      }
+
+      .text_button {
+        width: 40%;
+        height: auto;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        button {
+          display: flex;
+          width: 180px;
+          height: 50px;
+          //   padding: 18px 80px;
+          justify-content: center;
+          align-items: center;
+          gap: 28px;
+          flex-shrink: 0;
+
+          border-radius: 12px;
+          background: #ef6a3c;
+          color: white;
+          border: none;
+          cursor: pointer;
+
+          &:active {
+            color: black;
+            background-color: transparent;
+            color: #ef6a3c;
+            border: 2px solid #ef6a3c;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 447px) {
+  .Yangiliklar_Boxes {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    .box {
+      width: 100%;
+      height: 240px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .text {
+        padding: 15px;
+        .text_info {
+          margin-top: 40px;
+          width: 100%;
+          h3 {
+            font-size: 20px;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 12px;
+            margin-top: 10px;
+          }
+        }
+
+        .text_button {
+          width: 100%;
+          height: auto;
+          button {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 447px) and (max-width: 769px) {
+  .Yangiliklar_Boxes {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    .box {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .text {
+        padding: 20px;
+        .text_info {
+          margin-top: 190px;
+          width: 100%;
+          h3 {
+            font-size: 23px;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+        }
+
+        .text_button {
+          width: 100%;
+          height: auto;
+          justify-content: flex-start;
+          button {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 990px) {
+  .Yangiliklar_Boxes {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    .box {
+      width: 48%;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .text {
+        padding: 20px;
+        .text_info {
+          // margin-top: ;
+          width: 100%;
+          h3 {
+            font-size: 23px;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+        }
+
+        .text_button {
+          width: 100%;
+          height: auto;
+          justify-content: flex-start;
+          button {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .Yangiliklar_Boxes {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    .box {
+      width: 48%;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .text {
+        padding: 20px;
+        .text_info {
+          margin-top: 50px;
+          width: 100%;
+          h3 {
+            font-size: 23px;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+        }
+
+        .text_button {
+          width: 100%;
+          height: auto;
+          justify-content: flex-start;
+          button {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
