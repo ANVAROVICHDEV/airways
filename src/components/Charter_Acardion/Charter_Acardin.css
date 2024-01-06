@@ -1,128 +1,143 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .Charter_Acardin {
-	width: 100%;
-	min-height: 600px;
-	padding: 100px 200px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-  }
-  .Charter_Acardin .Acardion_box {
-	width: 550px;
-	height: auto;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_button {
-	width: 550px;
-	height: 120px;
-	padding: 0;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 17px;
-	border: none;
-	border-radius: 9px;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_button .radio {
-	width: 54px;
-	height: 54px;
-	flex-shrink: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 23px;
-	border-radius: 16px;
-	border: 1px solid var(--3darajali, #ededed);
-	background: #f9f9f9;
-	color: #ef6a3c;
-	transition: all 0.8s linear;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_button .radio .down {
-	display: none;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_button.active .radio .down {
-	display: flex;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_button.active .radio .top {
-	display: none;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_text {
-	width: 550px;
-	height: 0;
-	display: flex;
-	flex-wrap: wrap;
-	overflow-y: scroll;
-	border-radius:16px  0 0 16px ;
-	background: var(--5-assosiy, #fbfbfb);
-	transition: all 1s ease !important;
-	margin-bottom: 20px;
+  width: 100%;
+  min-height: 600px;
+  padding: 100px 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 40px;
+}
+.Charter_Acardin .Acardion_box {
+  width: 550px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+.Charter_Acardin .Acardion_box .Acardion_button {
+  width: 550px;
+  height: 120px;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px;
+  border: none;
+  border-radius: 9px;
+}
+.Charter_Acardin .Acardion_box .Acardion_button .radio {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  border-radius: 16px;
+  border: 1px solid var(--3darajali, #ededed);
+  background: #f9f9f9;
+  color: #ef6a3c;
+  transition: all 0.8s linear;
+}
+.Charter_Acardin .Acardion_box .Acardion_button .radio .down {
+  display: none;
+}
+.Charter_Acardin .Acardion_box .Acardion_button.active .radio .down {
+  display: flex;
+}
+.Charter_Acardin .Acardion_box .Acardion_button.active .radio .top {
+  display: none;
+}
+.Charter_Acardin .Acardion_box .Acardion_text {
+  width: 550px;
+  height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  border-radius: 16px 0 0 16px;
+  background: var(--5-assosiy, #fbfbfb);
+  transition: all 1s ease !important;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: -330px;
+  z-index: 2;
 }
 .Charter_Acardin .Acardion_box .Acardion_text.active {
-	transition: all 1s ease !important;
-	height: 300px !important;
-	border: 1px solid gray;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_text .Direction {
-	width: 100%;
-	height: 50px;
-	display: flex;
-	padding: 20px;
-	justify-content: space-between;
-	margin-top: 10px;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_text .Direction:hover h3,
-  .Charter_Acardin .Acardion_box .Acardion_text .Direction:hover h4 {
-	color: #ef6a3c;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_text .Direction:hover .Direction_time button {
-	background-color: #ef6a3c;
-	color: white;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_text .Direction .Direction_text {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_text .Direction .Direction_time {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-  }
-  .Charter_Acardin .Acardion_box .Acardion_text .Direction .Direction_time button {
-	display: inline-flex;
-	padding: 10px 30px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 12px;
-	border: 2px solid var(--Asosiy-rang, #ef6a3c);
-	background-color: transparent;
-  }
+  transition: all 1s ease !important;
+  height: 300px !important;
+  border: 1px solid gray;
+}
+.Charter_Acardin .Acardion_box .Acardion_text .Direction {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.Charter_Acardin .Acardion_box .Acardion_text .Direction:hover h3,
+.Charter_Acardin .Acardion_box .Acardion_text .Direction:hover h4 {
+  color: #ef6a3c;
+}
+.Charter_Acardin
+  .Acardion_box
+  .Acardion_text
+  .Direction:hover
+  .Direction_time
+  button {
+  background-color: #ef6a3c;
+  color: white;
+}
+.Charter_Acardin .Acardion_box .Acardion_text .Direction .Direction_text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Charter_Acardin .Acardion_box .Acardion_text .Direction .Direction_time {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.Charter_Acardin
+  .Acardion_box
+  .Acardion_text
+  .Direction
+  .Direction_time
+  button {
+  display: inline-flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  border: 2px solid var(--Asosiy-rang, #ef6a3c);
+  background-color: transparent;
+}
 
-  .Charter_Acardin ::-webkit-scrollbar {
-	width: 5px;
-	height: 100px;
-	padding: 20px;
-  }
-  .Charter_Acardin ::-webkit-scrollbar {
-	height: 20px;
-	padding: 20px;
-  }
-  .Charter_Acardin ::-webkit-scrollbar-track {
-	background: rgb(195, 194, 194);
-	padding: 20px;
-  }
-  .Charter_Acardin ::-webkit-scrollbar-thumb {
-	background: #ef6a3c;
-	border-radius: 12px;
-	scrollbar-color: #d9d9d9, #ef6a3c;
-	scrollbar-width: thin;
-	padding: 20px;
-  }
+.Charter_Acardin ::-webkit-scrollbar {
+  width: 5px;
+  height: 100px;
+  padding: 20px;
+}
+.Charter_Acardin ::-webkit-scrollbar {
+  height: 20px;
+  padding: 20px;
+}
+.Charter_Acardin ::-webkit-scrollbar-track {
+  background: rgb(195, 194, 194);
+  padding: 20px;
+}
+.Charter_Acardin ::-webkit-scrollbar-thumb {
+  background: #ef6a3c;
+  border-radius: 12px;
+  scrollbar-color: #d9d9d9, #ef6a3c;
+  scrollbar-width: thin;
+  padding: 20px;
+}

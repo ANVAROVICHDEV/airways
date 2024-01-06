@@ -37,16 +37,20 @@ $white: #fff;
       width: 48%;
       .top {
         h1 {
+          height: 12.8dvh;
           color: var(--2-darajali, #1f1f1f);
           font-size: 36px;
           font-style: normal;
           font-weight: 700;
           line-height: normal;
         }
+
         .info {
           display: flex;
           align-items: center;
           p {
+            width: 90%;
+            height: 8dvh;
             margin-top: 30px;
             color: var(--2-darajani-2chisi, #555);
             font-size: 20px;
@@ -110,6 +114,7 @@ $white: #fff;
         img {
           width: 100%;
           height: 100%;
+          border-radius: 18px;
         }
         button {
           padding: 10px 26px;
@@ -352,18 +357,15 @@ $white: #fff;
 
 @media screen and (min-width: 900px) and (max-width: 1200px) {
   .header_slider {
-  padding: 36px 40px 0 40px;
-
+    padding: 36px 40px 0 40px;
 
     .mainSwiper {
-
       .left {
         .top {
           h1 {
             font-size: 26px;
           }
           .info {
-            
             p {
               margin-top: 16px;
               font-size: 18px;
