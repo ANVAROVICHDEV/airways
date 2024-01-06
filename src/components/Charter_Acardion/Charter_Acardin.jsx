@@ -41,11 +41,12 @@ const Charter_Acardin = () => {
 							onClick={() => openAcardion(charters.id)}
 						>
 							<img
-								style={{ objectFit: "cover" }}
+								style={{ objectFit: "cover", borderRadius: "12px"}}
 								width={"200px"}
 								height={"80px"}
 								src={charters.image}
 								alt={charters.name}
+								
 							/>{" "}
 							<h2>{charters.name}</h2>{" "}
 							<div className="radio">
@@ -63,7 +64,7 @@ const Charter_Acardin = () => {
 							{charters.charters.map((item) => (
 								<div className="Direction" key={item.id}>
 									<div className="Direction_text">
-										<h3>{item.city}</h3>
+										<h3>{item.city} </h3>
 									</div>
 									<div className="Direction_time">
 										<p>{item.date}</p>
