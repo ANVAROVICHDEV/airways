@@ -25,7 +25,7 @@ function App() {
         <Route path="/Qoidalar" element={<Qoidalar />} />
         <Route path="/Yangiliklar" element={<Yangiliklar />} />
         <Route path="/Biz_xaqimizda" element={<Biz_xaqimizda />} />
-        <Route path="/Yangiliklar_ichi" element={<Yangiliklar_ichi />} />
+        <Route path="/Yangiliklar_ichi/:slug" element={<Yangiliklar_ichi />} />
         <Route path="/All_box" element={<Allbox />} />
       </Routes>
       <Footer />
