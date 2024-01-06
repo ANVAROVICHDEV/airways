@@ -5,16 +5,16 @@ import { FaAngleDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { Calendar, theme } from "antd";
 const AsosiyYonalishlar = () => {
-	const { token } = theme.useToken();
-	const wrapperStyle = {
-		width: 300,
-		border: `1px solid ${token.colorBorderSecondary}`,
-		borderRadius: token.borderRadiusLG,
-	};
+	// const { token } = theme.useToken();
+	// const wrapperStyle = {
+	// 	width: 300,
+	// 	border: `1px solid ${token.colorBorderSecondary}`,
+	// 	borderRadius: token.borderRadiusLG,
+	// };
 
-	const onPanelChange = (value) => {
-		console.log(value.format("YYYY-MM-DD"));
-	};
+	// const onPanelChange = (value) => {
+	// 	console.log(value.format("YYYY-MM-DD"));
+	// };
 
 	return (
 		<div className="AsosiyYonalishlar">
@@ -24,7 +24,7 @@ const AsosiyYonalishlar = () => {
 				</div>
 
 
-				<div className="box">
+				{/* <div className="box">
 					<div className="box_hover ">
 						<div style={wrapperStyle } >
 							<Calendar  fullscreen={false} onChange={onPanelChange} />
@@ -38,7 +38,7 @@ const AsosiyYonalishlar = () => {
 							<h3>Toshkent</h3>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
         
 			</div>
