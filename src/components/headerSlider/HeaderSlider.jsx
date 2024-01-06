@@ -24,6 +24,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { TypeAnimation } from "react-type-animation";
+import { Link, useNavigate } from "react-router-dom";
 
 const HeaderSlider = () => {
   const [images, setImages] = useState();
@@ -35,6 +36,8 @@ const HeaderSlider = () => {
     };
     getData();
   }, []);
+
+  const navigate = useNavigate()
 
   return (
     <div className="header_slider">
@@ -58,7 +61,10 @@ const HeaderSlider = () => {
                   speed={50}
                 />
               </p>
-              <button>Batafsil</button>
+              
+                <button onClick={() => navigate("/Biz_xaqimizda")}>Batafsil</button>
+                
+              
             </div>
           </div>
           <Swiper

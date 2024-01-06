@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom';
 const Yangiliklar_ichi_text = () => {
   const {slug} = useParams()
 
+  document.documentElement.scrollTop = 0
+
   const [news , setNews] = useState()
 
   useEffect(() => {
@@ -21,28 +23,20 @@ const Yangiliklar_ichi_text = () => {
   } , [])
 
 
+
 	return (
 		<div className="Yangiliklar_ichi_text">
+			<img width={'100%'} height={"300px"} style={{objectFit:"cover" , borderRadius: '12px'}} src={news?.image} alt="" />
 			<div className="text">
 				<div className="text_data">
-					<h3>Bugun Xalqaro fuqaro aviatsiyasi kuni!</h3>
+					<h3>{news?.name}</h3>
 					<p>
-						Bugun Xalqaro fuqaro aviatsiyasi kuni!Silk Avia havo kemalari
-						parvozlarining xavfsizligi, qulayligi va o‘z vaqtida bajarilishini
-						ta’minlashga o`z hissasini qo`shayotgan O‘zbekiston Respublikasining
-						aviatsiya xodimlarini, shu jumladan barcha dispetcherlar,
-						uchuvchilar, muhandislarni bugungi bayram bilan tabriklaydi.
+						{news?.description}
 					</p>
-					<p>
-						Bugun Xalqaro fuqaro aviatsiyasi kuni!Silk Avia havo kemalari
-						parvozlarining xavfsizligi, qulayligi va o‘z vaqtida bajarilishini
-						ta’minlashga o`z hissasini qo`shayotgan O‘zbekiston Respublikasining
-						aviatsiya xodimlarini, shu jumladan barcha dispetcherlar,
-						uchuvchilar, muhandislarni bugungi bayram bilan tabriklaydi.
-					</p>
+					
 				</div>
 				<div className="text_date">
-					<h3>20.20.2023</h3>
+					<h3>{news?.date}</h3>
 				</div>
 			</div>
 		</div>

@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { Calendar, theme } from "antd";
 import { ApiService } from "../../service/api.service";
 const All_box = () => {
-	document.documentElement.scrollTop = 0;
 
+	document.documentElement.scrollTop = 0;
 	const [directions, setDirections] = useState([]);
 	const [code, setCode] = useState();
 	const { token } = theme.useToken();

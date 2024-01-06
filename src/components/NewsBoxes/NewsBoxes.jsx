@@ -1,99 +1,40 @@
-import React from 'react'
-import "./NewsBoxes.scss"
+import React, { useEffect, useState } from "react";
+import "./NewsBoxes.scss";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const NewsBoxes = () => {
-  return (
-    <div className='boxes'>
-    <div className="box">
-    <img src="./images/Rectangle 41.png" alt="" />
-      <div className="info">
-        <h1>
-          Barcha yo‘nalishlarimizda talabalar uchun 50% chegirma e’lon
-          qilamiz!
-        </h1>
-        <button className="batafsil">Batafsil</button>
-      </div>
-      <div className="support"></div>
-    </div>
-        <div className="box">
-        <img src="./images/Rectangle 41.png" alt="" />
-          <div className="info">
-            <h1>
-              Barcha yo‘nalishlarimizda talabalar uchun 50% chegirma e’lon
-              qilamiz!
-            </h1>
-            <button className="batafsil">Batafsil</button>
-          </div>
-          <div className="support"></div>
-        </div>
-        <div className="box">
-        <img src="./images/Rectangle 41.png" alt="" />
-          <div className="info">
-            <h1>
-              Barcha yo‘nalishlarimizda talabalar uchun 50% chegirma e’lon
-              qilamiz!
-            </h1>
-            <button className="batafsil">Batafsil</button>
-          </div>
-          <div className="support"></div>
-        </div>
-        <div className="box">
-        <img src="./images/Rectangle 41.png" alt="" />
-          <div className="info">
-            <h1>
-              Barcha yo‘nalishlarimizda talabalar uchun 50% chegirma e’lon
-              qilamiz!
-            </h1>
-            <button className="batafsil">Batafsil</button>
-          </div>
-          <div className="support"></div>
-        </div>
-    <div className="box">
-    <img src="./images/Rectangle 41.png" alt="" />
-      <div className="info">
-        <h1>
-          Barcha yo‘nalishlarimizda talabalar uchun 50% chegirma e’lon
-          qilamiz!
-        </h1>
-        <button className="batafsil">Batafsil</button>
-      </div>
-      <div className="support"></div>
-    </div>
-        <div className="box">
-        <img src="./images/Rectangle 41.png" alt="" />
-          <div className="info">
-            <h1>
-              Barcha yo‘nalishlarimizda talabalar uchun 50% chegirma e’lon
-              qilamiz!
-            </h1>
-            <button className="batafsil">Batafsil</button>
-          </div>
-          <div className="support"></div>
-        </div>
-        <div className="box">
-        <img src="./images/Rectangle 41.png" alt="" />
-          <div className="info">
-            <h1>
-              Barcha yo‘nalishlarimizda talabalar uchun 50% chegirma e’lon
-              qilamiz!
-            </h1>
-            <button className="batafsil">Batafsil</button>
-          </div>
-          <div className="support"></div>
-        </div>
-        <div className="box">
-        <img src="./images/Rectangle 41.png" alt="" />
-          <div className="info">
-            <h1>
-              Barcha yo‘nalishlarimizda talabalar uchun 50% chegirma e’lon
-              qilamiz!
-            </h1>
-            <button className="batafsil">Batafsil</button>
-          </div>
-          <div className="support"></div>
-        </div>
-    </div>
-  )
-}
+  const [news, setNews] = useState(null)
 
-export default NewsBoxes
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get("http://kfuk.karimjonov.uz/api/news")
+      setNews(response.data.news);
+    }
+    getData()
+  }, [])
+  return (
+    <div className="boxes">
+      {
+        news && news.map(item => (
+          <div className="box">
+            <img src={item.image} alt="" />
+            <div className="info">
+              <h1>
+                {
+                  item.name
+                }
+              </h1>
+              <Link to={`/Yangiliklar_ichi/${item.slug}`}>
+                <button className="batafsil">Batafsil</button>
+              </Link>
+            </div>
+            <div className="support"></div>
+          </div>
+        ))
+      }
+    </div>
+  );
+};
+
+export default NewsBoxes;

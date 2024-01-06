@@ -41,12 +41,12 @@ const Charter_Acardin = () => {
 							onClick={() => openAcardion(charters.id)}
 						>
 							<img
-								style={{ objectFit: "cover", borderRadius: "12px"}}
+								style={{ objectFit: "cover", borderRadius: "12px" }}
 								width={"200px"}
 								height={"80px"}
 								src={charters.image}
 								alt={charters.name}
-								
+
 							/>{" "}
 							<h2>{charters.name}</h2>{" "}
 							<div className="radio">
