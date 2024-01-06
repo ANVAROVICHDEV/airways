@@ -40,16 +40,16 @@ export default function App() {
 				</div>
 			</div>
 			<Swiper
-				 spaceBetween={30}
-				 centeredSlides={false}
-				 autoplay={{
-				   delay: 2500,
-				   disableOnInteraction: false,
-				 }}
-				 pagination={{
-				   clickable: false,
-				 }}
-				 modules={[Autoplay, Pagination, Navigation]}
+				spaceBetween={30}
+				centeredSlides={false}
+				autoplay={{
+					delay: 2500,
+					disableOnInteraction: false,
+				}}
+				pagination={{
+					clickable: false,
+				}}
+				modules={[Autoplay, Pagination, Navigation]}
 				navigation={{
 					prevEl: ".mainSlider1_left",
 					nextEl: ".mainSlider1_right",

@@ -122,7 +122,7 @@ const AsosiyYonalishlar = () => {
 			</div>
 
 			<div className="button">
-				<Link to={"/All_box"}>
+				<Link to={"/Yonalishlar"}>
 					<button>Barchasini ko’rish</button>
 				</Link>
 			</div>

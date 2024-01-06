@@ -24,17 +24,18 @@
 
 .mainSlider1 .swiper-slide {
 	width: 350px;
+	border-radius: 18px;
 }
 
 .mainSlider1 .image{
 	width: 100%;
-	height: 200px;
+	height: 300px;
 }
 .mainSlider1 .image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	
+	border-radius: 12px 12px 0 0;
 }
 
 
@@ -49,6 +50,7 @@
 	align-items: center;
 	color: #EF6A3C;
 	font-weight: bold;
+	border-radius: 0 0 12px 12px;
 }
 
 
