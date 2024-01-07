@@ -11,15 +11,23 @@ import { v4 as uuidv4 } from "uuid";
 
 const AsosiyYonalishlar = () => {
   const [realTime, setRealTime] = useState(moment().format('YYYY-MM-DD'))
-  const [directions, setDirections] = useState([realTime]);
-  const [code, setCode] = useState();
-  const { token } = theme.useToken();
+	const [directions, setDirections] = useState([]);
+	const [code, setCode] = useState();
+	const { token } = theme.useToken();
+  const [calendarid , setCalendarid] = useState()
+	
+	const changeid = (id) =>{
+		setCalendarid(id)
+		setTimeout(() =>{
+			setCalendarid(null)
+		},10000)
+	}
 
-  const wrapperStyle = {
-    width: 300,
-    border: `1px solid ${token.colorBorderSecondary}`,
-    borderRadius: token.borderRadiusLG,
-  };
+	const wrapperStyle = {
+		width: 300,
+		border: `1px solid ${token.colorBorderSecondary}`,
+		borderRadius: token.borderRadiusLG,
+	};
 
   useEffect(() => {
     const getData = async () => {
@@ -107,25 +115,25 @@ const AsosiyYonalishlar = () => {
           <h1>Serqatnov yo’nalishlar</h1>
         </div>
 
-        {directions &&
-          directions.map((direction) => (
-            <div className="box" key={uuidv4()}>
-              <div className="box_hover ">
-                <div style={wrapperStyle}>
-                  <Calendar fullscreen={false} onChange={onPanelChange} />
-                </div>
-              </div>
-              <img src={direction.image} alt="" />
-              <div className="text">
-                <div className="info">
-                  <h3>{direction.from}</h3>
-                  <FaAngleDown />
-                  <h3>{direction.to}</h3>
-                </div>
-              </div>
-            </div>
-          ))}
-      </div>
+				{directions &&
+					directions.map((direction) => (
+						<div className="box" key={direction.id}>
+							<div className="box_hover ">
+								<div style={wrapperStyle}>
+									<Calendar fullscreen={false} onChange={onPanelChange} />
+								</div>
+							</div>
+							<img src={direction.image} alt="" />
+							<div className="text">
+								<div className="info">
+									<h3>{direction.from}</h3>
+									<FaAngleDown />
+									<h3>{direction.to}</h3>
+								</div>
+							</div>
+						</div>
+					))}
+			</div>
 
       <div className="button">
         <Link to={"/Yonalishlar"}>
