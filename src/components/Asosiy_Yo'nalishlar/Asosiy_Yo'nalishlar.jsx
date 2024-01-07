@@ -41,11 +41,13 @@ const AsosiyYonalishlar = () => {
     getData();
   }, []);
 
+  console.log(directions);
+
   const onPanelChange = async (value) => {
-    directions && directions.map((item) => setCode(item));
+    
     console.log(value.format("YYYY-MM-DD"));
-    const f = code.from_code; // Replace with the actual IATA code for departure
-    const t = code.to_code; // Replace with the actual IATA code for arrival
+    const f = code?.from_code; // Replace with the actual IATA code for departure
+    const t = code?.to_code; // Replace with the actual IATA code for arrival
     const inp = value.format("YYYY-MM-DD"); // Replace with the actual departure date in the format 'YYYY-MM-DD'
 
     const sendData = async () => {
@@ -109,7 +111,9 @@ const AsosiyYonalishlar = () => {
   };
 
   return (
+    
     <div className="AsosiyYonalishlar">
+      <div id="root"></div>
       <div className="boxes">
         <div className="text">
           <h1>Serqatnov yo’nalishlar</h1>
@@ -136,7 +140,10 @@ const AsosiyYonalishlar = () => {
                     </div>
                   </div>
                   <div className="botton">
-                    <button onClick={() => changeid(direction.id)}>
+                    <button onClick={() => {
+                      changeid(direction.id)
+                      setCode(direction)
+                    }}>
                       Qidirish
                     </button>
                   </div>

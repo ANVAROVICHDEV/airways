@@ -15,9 +15,10 @@ const Asosiy = ({ scrollTop }) => {
     <div className="asosiy">
       <header>
         <HeaderSlider />
-        <Modal />
+        {/* <Modal /> */}
       </header>
       <main>
+        
         <Asosiy_Yonalishlar />
         <MainSlider1 />
         <MainSlider2 />
