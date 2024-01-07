@@ -1,12 +1,12 @@
-.boxes {
-  padding: 10px 220px 80px 220px;
+.newsBoxes {
+  padding: 10px 200px 80px 200px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 50px;
   margin-top: 0px;
   .box {
-    width: 280px;
+    width: 270px;
     height: 330px;
     border-radius: 18px;
     position: relative;
@@ -40,7 +40,8 @@
         line-height: 140%; /* 22.4px */
         cursor: pointer;
         position: absolute;
-        left: 30px;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: -140%;
         transition: all ease 0.3s;
         &:active {
@@ -50,6 +51,7 @@
     }
     img {
       width: 100%;
+      height: 100%;
     }
     .support {
       height: 100%;
@@ -76,7 +78,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .boxes {
+  .newsBoxes {
     padding: 30px 30px 40px 30px;
     row-gap: 30px;
     .box {
@@ -96,14 +98,14 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 840px) {
-  .boxes {
+  .newsBoxes {
     padding: 30px 30px 40px 30px;
     row-gap: 40px;
   }
 }
 
 @media screen and (min-width: 840px) and (max-width: 1200px) {
-  .boxes {
+  .newsBoxes {
     padding: 30px 80px 40px 80px;
   }
 }

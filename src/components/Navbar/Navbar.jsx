@@ -74,7 +74,9 @@ const Navbar = () => {
                 <h3>parvoz-airways@mail.ru</h3>
               </Link>
             </div>
+            <Link to={"/Biz_xaqimizda"}>
             <button>Bog’lanish</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -123,8 +125,9 @@ const Navbar = () => {
             <option value="Rus">Rus</option>
           </select>
         </div>
-
+        <Link to={"/Biz_xaqimizda"}>
         <button>Bog’lanish</button>
+        </Link>
 
         <HiMiniBars3BottomRight
           className="bars2"

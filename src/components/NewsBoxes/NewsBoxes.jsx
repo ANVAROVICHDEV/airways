@@ -14,7 +14,7 @@ const NewsBoxes = () => {
     getData()
   }, [])
   return (
-    <div className="boxes">
+    <div className="newsBoxes">
       {
         news && news.map(item => (
           <div className="box">
