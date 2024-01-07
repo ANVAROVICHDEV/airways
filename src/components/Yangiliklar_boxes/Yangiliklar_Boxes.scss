@@ -1,12 +1,16 @@
+
+
+
 .Yangiliklar_Boxes {
   width: 100%;
   height: auto;
-  padding: 60px 220px;
+  padding: 80px  220px  0px 220px;
   display: flex;
   justify-content: space-between;
+  
   .box {
     width: 49%;
-    height: auto;
+    height: 330px;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
@@ -90,6 +94,10 @@
           color: white;
           border: none;
           cursor: pointer;
+          &:hover{
+            color: black;
+            border: 1px solid;
+          }
 
           &:active {
             color: black;

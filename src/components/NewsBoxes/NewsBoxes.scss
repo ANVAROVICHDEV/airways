@@ -1,12 +1,13 @@
 .boxes {
-  padding: 30px 220px 80px 220px;
+  padding: 10px 220px 80px 220px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 50px;
+  margin-top: 0px;
   .box {
-    width: 252px;
-    height: 300px;
+    width: 280px;
+    height: 330px;
     border-radius: 18px;
     position: relative;
     overflow: hidden;
