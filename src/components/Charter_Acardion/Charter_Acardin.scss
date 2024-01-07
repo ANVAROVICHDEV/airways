@@ -1,0 +1,210 @@
+$color_1: #ef6a3c;
+$color_2: white;
+$background-color_1: #ef6a3c;
+$background-color_2: transparent;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Charter_Acardin {
+  width: 100%;
+  min-height: 600px;
+  padding: 100px 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 40px;
+  .Acardion_box {
+    width: 550px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    transition: all linear 0.3s !important;
+
+    .Acardion_button {
+      width: 550px;
+      height: 120px;
+      padding: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 17px;
+      border: none;
+      border-radius: 9px;
+      .radio {
+        width: 54px;
+        height: 54px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 23px;
+        color: $color_1;
+        border-radius: 16px;
+        border: 1px solid var(--3darajali, #ededed);
+        background: #f9f9f9;
+        transition: all 0.8s linear;
+        .top {
+          display: flex;
+          transform: rotate(180deg);
+          transition: all linear 0.3s !important;
+        }
+      }
+      &.active {
+        .radio {
+          .top {
+            transition: all linear 0.3s;
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+
+    .Acardion_text {
+      width: 550px;
+      height: 0;
+      display: flex;
+      flex-wrap: wrap;
+      overflow-y: scroll;
+      border-radius: 16px 0 0 16px;
+      background: var(--5-assosiy, #fbfbfb);
+      margin-bottom: 20px;
+      position: absolute;
+      bottom: -330px;
+      z-index: 2;
+      transition: all ease 0.3s !important;
+      background: var(--5-assosiy, #fbfbfb);
+      .Direction {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        margin-top: 10px;
+		
+		button{
+			color: $color_1;
+			cursor: pointer;
+		}
+        &:hover {
+          h3 {
+            color: $color_1;
+          }
+          
+          .Direction_time {
+            button {
+              background-color: $background-color_1;
+              color: $color_2;
+            }
+          }
+        }
+        .Direction_text {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .Direction_time {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          button {
+            display: inline-flex;
+            padding: 10px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 12px;
+            border: 2px solid var(--Asosiy-rang, #ef6a3c);
+            background-color: $background-color_2;
+          }
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 100px;
+        padding: 20px;
+        height: 20px;
+        padding: 20px;
+      }
+      &::-webkit-scrollbar-track {
+        padding: 20px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #ef6a3c;
+        border-radius: 12px;
+        scrollbar-color: #d9d9d9, #ef6a3c;
+        scrollbar-width: thin;
+        padding: 20px;
+      }
+    }
+    .Acardion_text.active {
+      height: 300px !important;
+      border: 1px solid #ededed;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .Charter_Acardin {
+    padding: 60px 20px;
+    row-gap: 20px;
+    .Acardion_box {
+      width: 100%;
+      .Acardion_button {
+        width: 100%;
+        height: 120px;
+        img {
+          width: 100px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        .radio {
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+        }
+      }
+
+      .Acardion_text {
+        width: 100%;
+        gap: 10px;
+        .Direction {
+          width: 100%;
+          height: 50px;
+          padding: 10px 20px;
+          justify-content: space-between;
+          margin-top: 10px;
+          p {
+            color: #555;
+          }
+          &:hover {
+            h3 {
+              color: $color_1;
+            }
+          }
+          .Direction_text {
+            width: 50%;
+          }
+          .Direction_time {
+            gap: 20px;
+            button {
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .Charter_Acardin {
+    padding: 60px 20px;
+    justify-content: center;
+  }
+}

@@ -12,6 +12,8 @@ import "animate.css/animate.min.css";
 import "animate.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+// 
+import { v4 as uuidv4 } from "uuid";
 
 const MainSlider2 = () => {
   const [news, setNews] = useState(null)
@@ -54,7 +56,7 @@ const MainSlider2 = () => {
         }}
         breakpoints={{
           0: {
-            slidesPerView: 1.5,
+            slidesPerView: 1,
             centeredSlides: true
           },
           600: {
@@ -69,7 +71,7 @@ const MainSlider2 = () => {
         }}
       >
         {news && news.map(item => (
-          <SwiperSlide>
+          <SwiperSlide key={uuidv4()}>
             
             <img className="img" src={item.image} alt="" />
             <div className="info">

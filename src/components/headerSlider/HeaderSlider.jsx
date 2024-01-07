@@ -37,7 +37,12 @@ const HeaderSlider = () => {
     getData();
   }, []);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const swiper2Pagination = {
+    el: ".swiper2Pagination",
+    type: "fraction",
+  };
 
   return (
     <div className="header_slider">
@@ -61,10 +66,10 @@ const HeaderSlider = () => {
                   speed={50}
                 />
               </p>
-              
-                <button onClick={() => navigate("/Biz_xaqimizda")}>Batafsil</button>
-                
-              
+
+              <button onClick={() => navigate("/Biz_xaqimizda")}>
+                Batafsil
+              </button>
             </div>
           </div>
           <Swiper
@@ -77,6 +82,7 @@ const HeaderSlider = () => {
             }}
             navigation={false}
             modules={[Autoplay, Navigation]}
+            speed={400}
           >
             {images &&
               images.map((image) => (
@@ -100,6 +106,8 @@ const HeaderSlider = () => {
             navigation={false}
             modules={[Autoplay, Navigation]}
             direction={"vertical"}
+            speed={400}
+
           >
             {images &&
               images.map((image) => (
@@ -120,11 +128,18 @@ const HeaderSlider = () => {
           spaceBetween={50}
           slidesPerView={1.4}
           navigation={{ prevEl: ".left", nextEl: ".right" }}
-          pagination={{ clickable: true, type: "fraction" }}
+          pagination={swiper2Pagination}
           centeredSlides={true}
           loop={true}
         >
-          <SwiperSlide>
+          {images &&
+            images.map((item) => (
+              <SwiperSlide key={uuidv4()}>
+                <div className="support"></div>
+                <img src={item.image2} alt="" />
+              </SwiperSlide>
+            ))}
+          {/* <SwiperSlide>
             <div className="support"></div>
             <img src="./images/Rectangle 161.png" alt="" />
           </SwiperSlide>
@@ -135,16 +150,14 @@ const HeaderSlider = () => {
           <SwiperSlide>
             <div className="support"></div>
             <img src="./images/Rectangle 161.png" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="support"></div>
-            <img src="./images/Rectangle 161.png" alt="" />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
         <div className="adaptiv_arrows">
           <button className="arrows left">
             <IoIosArrowBack />
           </button>
+          <div className="swiper2Pagination"></div>
+
           <button className="arrows right">
             <IoIosArrowForward />
           </button>

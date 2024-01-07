@@ -16,7 +16,6 @@
       color: var(--2-darajani-2chisi, #555);
 
       /* S 5 */
-      font-family: Inter;
       font-size: 18px;
       font-style: normal;
       font-weight: 600;
@@ -53,7 +52,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border: 2px solid black;
+      border: 1px solid rgb(236, 232, 232);
 			transition: all 0.5s linear;
 			&:hover {
 				.text {
