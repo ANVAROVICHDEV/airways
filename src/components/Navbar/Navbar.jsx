@@ -14,7 +14,8 @@ const Navbar = () => {
   return (
     <div className="nav">
       <div className={barscart ? "barsclick active" : "barsclick"}>
-        <ul>
+      <div className="topinfo">
+      <ul>
           <li>
             <NavLink to={"/"}>Asosiy</NavLink>
           </li>
@@ -46,6 +47,7 @@ const Navbar = () => {
           <option value="Eng">Eng</option>
           <option value="Rus">Rus</option>
         </select>
+      </div>
 
         <div className="login">
           <div className="cantact">

@@ -18,7 +18,7 @@ $orange: #ef6a3c;
 
   .barsclick {
     width: 100%;
-    height: 140vh;
+    min-height: 150vh;
     position: absolute;
     bottom: 0;
     padding: 30px 30px;
@@ -26,35 +26,39 @@ $orange: #ef6a3c;
     right: -100%;
     transition: all 0.3s linear;
     background-color: white;
-    z-index: 2;
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      .active {
-        color: $orange;
-      }
+    z-index: 5;
 
-      a {
-        color: var(--2-darajani-2chisi, #555);
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 150%; /* 27px */
+    .topinfo{
+      padding: 17px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .active {
+          color: $orange;
+        }
+  
+        a {
+          color: var(--2-darajani-2chisi, #555);
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%; /* 27px */
+        }
       }
-    }
-    p {
-      margin-top: 40px;
-    }
-    select {
-      width: 240px;
-      display: flex;
-      border-radius: 18px;
-      border: 1px solid var(--4d-2-chi, #f1f1f1);
-      padding: 7px;
-      outline: none;
-      margin-top: 10px;
+      p {
+        margin-top: 40px;
+      }
+      select {
+        width: 240px;
+        display: flex;
+        border-radius: 18px;
+        border: 1px solid var(--4d-2-chi, #f1f1f1);
+        padding: 7px;
+        outline: none;
+        margin-top: 10px;
+      }
     }
     .cantact {
       width: 100%;
@@ -228,6 +232,42 @@ $orange: #ef6a3c;
     padding: 0px 20px;
     align-items: center;
     background-color: #1f1f1f;
+
+    .barsclick {
+        padding: 15px;
+      .cantact{
+        height: 300px;
+        p{
+          font-size: 15px;
+        }
+
+        .number{
+          font-size: 15px;
+          gap: 10px;
+          margin-top: -50px;
+        }
+
+        .email{
+          font-size: 15px;
+        }
+
+        button{
+          margin-top: -30px;
+          padding: 0;
+          height: 50px;
+        }
+        .icons{
+          margin-top: -40px;
+
+          .radio{
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+        }
+         }
+      }
+    }
+
     .logo {
       .white {
         display: flex;
@@ -264,9 +304,13 @@ $orange: #ef6a3c;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        
         .cantact {
           width: 400px;
 
+          
+          
           button {
             width: 88%;
           }
@@ -306,7 +350,7 @@ $orange: #ef6a3c;
 
     .barsclick {
       padding: 30px 40px;
-      height: 80vh;
+      min-height: 90vh;
 
       .login {
         width: 100%;
@@ -368,6 +412,7 @@ $orange: #ef6a3c;
 
     .barsclick {
       padding: 0px 40px;
+      min-height: 90vh;
       .login {
         width: 100%;
         display: flex;
