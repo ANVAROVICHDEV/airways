@@ -112,7 +112,7 @@ const AsosiyYonalishlar = () => {
 
   return (
     
-    <div className="AsosiyYonalishlar">
+    <div className="AsosiyYonalishlar  wow animate__animated animate__zoomInDown" >
       <div id="root"></div>
       <div className="boxes">
         <div className="text">

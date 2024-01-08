@@ -2,7 +2,7 @@ import React from "react";
 import "./Royxat.scss";
 const Royxat = () => {
   return (
-    <div className="Royxat">
+    <div className="Royxat_page">
 
       
       <div className="false box">

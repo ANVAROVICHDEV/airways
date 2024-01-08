@@ -104,7 +104,7 @@ const Boxes = () => {
   };
   return (
     <>
-      <div className="All_box">
+      <div className="All_box ">
         <div className="back">
           <hr />{" "}
           <Link to={"/"}>
@@ -114,7 +114,7 @@ const Boxes = () => {
         <div className="boxes">
           {directions &&
             directions.map((direction) => (
-              <div className="box" key={direction.id}>
+              <div className="   box" key={direction.id}>
                 <div className="box_hover2">
                   <div className="icon">
                     <div className="radio">

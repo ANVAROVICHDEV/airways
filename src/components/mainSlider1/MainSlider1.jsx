@@ -21,6 +21,7 @@ export default function App() {
   useEffect(() => {
     const getData = async () => {
       const data = await ApiService.fetching("charters");
+      console.log(data);
       setCharters(data);
     };
     getData();
@@ -28,6 +29,7 @@ export default function App() {
 
   return (
     <div className="mainSlider1">
+
       <div className="title">
         <h1>Charter yo’nalishlar</h1>
         <div className="arrows">
@@ -39,6 +41,7 @@ export default function App() {
           </button>
         </div>
       </div>
+
       <Swiper
         spaceBetween={30}
         centeredSlides={false}
@@ -66,7 +69,9 @@ export default function App() {
           },
         }}
         className="mySwiper"
+
       >
+
         {charters &&
           charters.map((charter) => (
             <SwiperSlide key={charter.id}>
@@ -74,10 +79,13 @@ export default function App() {
                 <div className="image">
                   <img src={charter?.image} alt={charter.name} />
                 </div>
-                <div className="text">{charter.name}</div>
+                <div className="text">{charter.name} </div>
               </Link>
+              
             </SwiperSlide>
           ))}
+    
+
       </Swiper>
     </div>
   );

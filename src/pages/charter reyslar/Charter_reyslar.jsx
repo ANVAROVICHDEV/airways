@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Charter_reyslar.scss"
 import WOW from 'wowjs';
-import { Charter_Acardin, Images, Location } from '../../app'
+import { Charter_Acardin, Images, Location, NewsBoxes } from '../../app'
 
 const Charter_reyslar = () => {
 
@@ -9,6 +9,7 @@ const Charter_reyslar = () => {
     <div className='Charter_reyslar'>
       <Images pageName={'Charter-reyslar'} />
       <Charter_Acardin />
+      <NewsBoxes  />
       <Location />
     
 

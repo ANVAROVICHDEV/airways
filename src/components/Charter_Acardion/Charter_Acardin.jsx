@@ -13,6 +13,7 @@ const Charter_Acardin = () => {
     const getData = async () => {
       const data = await ApiService.fetching("charters");
       setCharterss(data);
+	  
     };
     getData();
 
@@ -28,9 +29,10 @@ const Charter_Acardin = () => {
   };
 
   return (
-    <div className="Charter_Acardin">
+    <div className={chartersId   ? "Charter_Acardin active" :'Charter_Acardin'}>
       {charterss &&
         charterss.map((charters) => (
+			console.log(charters.charters),
           <div className="Acardion_box" key={uuidv4()}>
             <button
               className={
@@ -40,13 +42,15 @@ const Charter_Acardin = () => {
               }
               onClick={() => openAcardion(charters.id)}
             >
-              <img
+              <div className="img">
+			  <img
                 style={{ objectFit: "cover", borderRadius: "12px" }}
                 width={"200px"}
                 height={"80px"}
                 src={charters.image}
                 alt={charters.name}
               />{" "}
+			  </div>
               <h2>{charters.name}</h2>{" "}
               <div className="radio">
                 <IoMdArrowDropup className="top" />
@@ -60,6 +64,7 @@ const Charter_Acardin = () => {
               }
             >
               {charters.charters.map((item) => (
+				
                 <div className="Direction" key={item.id}>
                   <div className="Direction_text">
                     <h3>{item.city} </h3>

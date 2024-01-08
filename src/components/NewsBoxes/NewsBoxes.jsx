@@ -17,7 +17,7 @@ const NewsBoxes = () => {
     <div className="newsBoxes">
       {
         news && news.map(item => (
-          <div className="box">
+          <div className="box" key={item.id}>
             <img src={item.image} alt="" />
             <div className="info">
               <h1>

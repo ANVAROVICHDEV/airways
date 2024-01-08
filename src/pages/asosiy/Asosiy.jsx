@@ -4,6 +4,7 @@ import {
   Asosiy_Yonalishlar,
   Hamkorlar,
   HeaderSlider,
+  Location,
   MainSlider1,
   MainSlider2,
   Modal,
@@ -23,6 +24,7 @@ const Asosiy = ({ scrollTop }) => {
         <MainSlider1 />
         <MainSlider2 />
         <Hamkorlar />
+        <Location />
       </main>
     </div>
   );

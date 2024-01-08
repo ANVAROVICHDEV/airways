@@ -26,7 +26,10 @@ const Yangiliklar_ichi_text = () => {
 
 	return (
 		<div className="Yangiliklar_ichi_text">
+			<div className="img">
 			<img width={'100%'} height={"300px"} style={{objectFit:"cover" , borderRadius: '12px'}} src={news?.image} alt="" />
+
+			</div>
 			<div className="text">
 				<div className="text_data">
 					<h3>{news?.name}</h3>
@@ -36,7 +39,7 @@ const Yangiliklar_ichi_text = () => {
 					
 				</div>
 				<div className="text_date">
-					<h3>{news?.date}</h3>
+					<h3>{news?.date}.</h3>
 				</div>
 			</div>
 		</div>

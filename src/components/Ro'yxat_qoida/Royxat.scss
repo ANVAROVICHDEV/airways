@@ -1,4 +1,4 @@
-.Royxat {
+.Royxat_page {
   width: 100%;
   height: auto;
 
@@ -22,6 +22,7 @@
       width: 55%;
       padding: 40px 20px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       h2 {
         color: var(--2-darajali, #1f1f1f);
@@ -30,6 +31,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        width: 100%;
       }
       p {
         color: var(--2-darajani-2chisi, #555);
@@ -51,8 +53,10 @@
         width: 48%;
         height: 100%;
         padding: 0px;
+        display: flex;
+        align-items: center;
         h2{
-          margin-top: 80px;
+          margin-top: 50px;
         }
     }
     .img{
@@ -64,56 +68,8 @@
   }
 }
 
-// @media screen and (max-width:447px) {
-//   .Royxat {
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding: 50px 20px;
-//   border: 1px solid;
-//   height: auto;
-
-//   .box {
-//     width: 100%;
-//     min-height: auto;
-//     display: flex;
-//     flex-wrap: wrap;
-
-//     .img {
-//       width: 100%;
-//       img {
-//         width: 100%;
-//       }
-//     }
-
-//     .text {
-//       width: 100%;
-//       padding: 20px 0px;
-//       h2 {
-//         font-size: 28px;
-//       }
-//       p {
-//         font-size: 13px;
-//       }
-//     }
-//   }
-
-//   .true{
-//     margin-top: 60px;
-//     gap: 20px;
-//     height: auto;
-//     .text{
-//         width: 100%;
-
-//         h2{
-//           margin: 0;
-//         }
-//     }
-//   }
-// }
-// }
-
 @media screen and (max-width:447px) {
-  .Royxat {
+  .Royxat_page {
   display: flex;
   flex-wrap: wrap;
   padding: 50px 20px;
@@ -159,7 +115,7 @@
 }
 
 @media screen and (min-width:447px) and (max-width:769px) {
-  .Royxat {
+  .Royxat_page {
   display: flex;
   flex-wrap: wrap;
   padding: 50px 20px;
@@ -205,7 +161,7 @@
 }
 
 @media screen and (min-width:769px) and (max-width:990px) {
-  .Royxat {
+  .Royxat_page {
   display: flex;
   flex-wrap: wrap;
   padding: 50px 20px;
@@ -251,7 +207,7 @@
 }
 }
 // @media screen and (min-width:447px) and (max-width:769px) {
-//   .Royxat {
+//   .Royxat_page {
 //   display: flex;
 //   flex-wrap: wrap;
 //   padding: 50px 80px;
@@ -297,7 +253,7 @@
 // }
 
 // @media screen and (min-width:769px) and (max-width:990px) {
-//   .Royxat {
+//   .Royxat_page {
 //   display: flex;
 //   flex-wrap: wrap;
 //   padding: 50px 80px;
@@ -336,45 +292,45 @@
 //   }
 // }
 // }
-// @media screen and (min-width:990px) and (max-width:1200px) {
-//   .Royxat {
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding: 50px 80px;
+@media screen and (min-width:990px) and (max-width:1200px) {
+  .Royxat_page {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 80px;
 
-//   .box {
-//     width: 100%;
-//     min-height: auto;
-//     display: flex;
-//     flex-wrap: wrap;
+  .box {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-wrap: wrap;
 
-//     .img {
-//       width: 100%;
-//       height: 500px;
-//       img {
-//         width: 100%;
-//         height: 100%;
-//       }
-//     }
+    .img {
+      width: 100%;
+      height: 500px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
 
-//     .text {
-//       width: 100%;
-//       padding: 20px 0px;
-//       h2 {
-//         font-size: 28px;
-//       }
-//       p {
-//         font-size: 13px;
-//       }
-//     }
-//   }
+    .text {
+      width: 100%;
+      padding: 20px 0px;
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
 
-//   .true{
-//     margin-top: 60px;
-//     gap: 20px;
-//     .text{
-//         width: 100%;
-//     }
-//   }
-// }
-// }
+  .true{
+    margin-top: 60px;
+    gap: 20px;
+    .text{
+        width: 100%;
+    }
+  }
+}
+}

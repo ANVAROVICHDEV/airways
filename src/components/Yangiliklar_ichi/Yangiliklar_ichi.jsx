@@ -21,8 +21,8 @@ const Yangiliklar_ichi = () => {
         </div>
         <Yangiliklar_ichi_img />
         <Yangiliklar_ichi_text />
-        <Location />
       </div>
+        <Location />
     </>
   );
 };

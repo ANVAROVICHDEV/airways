@@ -10,15 +10,21 @@ $background-color_2: transparent;
 }
 .Charter_Acardin {
   width: 100%;
-  min-height: 600px;
-  padding: 100px 200px;
+  min-height: 400px;
+  padding: 100px 200px 30px 200px;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
   row-gap: 40px;
+
+  &.active{
+    padding: 100px 200px  300px 200px;
+  }
+
   .Acardion_box {
-    width: 550px;
-    height: auto;
+    width: 520px;
+    height: 125px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -36,6 +42,15 @@ $background-color_2: transparent;
       padding: 17px;
       border: none;
       border-radius: 9px;
+
+      .img{
+        width: 150px;
+
+        img{
+          width: 100%;
+        }
+      }
+
       .radio {
         width: 54px;
         height: 54px;
@@ -66,7 +81,7 @@ $background-color_2: transparent;
     }
 
     .Acardion_text {
-      width: 550px;
+      width: 520px;
       height: 0;
       display: flex;
       flex-wrap: wrap;
@@ -206,5 +221,19 @@ $background-color_2: transparent;
   .Charter_Acardin {
     padding: 60px 20px;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .Charter_Acardin {
+    padding: 60px 20px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .Charter_Acardin {
+    padding: 60px 40px;
+    justify-content:space-between;
   }
 }
