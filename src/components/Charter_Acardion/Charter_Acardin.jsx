@@ -27,20 +27,17 @@ const Charter_Acardin = () => {
 
   //////////////////////////////////////
 
-  const [expanded, setExpanded] = React.useState(false);
+  
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
 
-  const [num, setNum] = useState(1);
+
+  const [num , setNum] = useState(1)
   const [buttonClick, setButtonClick] = useState(false);
   const [charterid , setCharterid] = useState()
   const handlebutton = (id) =>{
     setButtonClick(!buttonClick)
     setCharterid(id)
   }
-
   return (
     <div className="Acardion">
    
@@ -104,7 +101,6 @@ const Charter_Acardin = () => {
           )
         )}
     </div>
-
   );
 };
 

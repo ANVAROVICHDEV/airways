@@ -7,7 +7,8 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import "./MainSlider1.css";
+import "./MainSlider1.scss";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -29,7 +30,6 @@ export default function App() {
 
   return (
     <div className="mainSlider1">
-
       <div className="title">
         <h1>Charter yo’nalishlar</h1>
         <div className="arrows">
@@ -45,13 +45,13 @@ export default function App() {
       <Swiper
         spaceBetween={30}
         centeredSlides={false}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
+        // pagination={{
+        //   clickable: false,
+        // }}
         modules={[Autoplay, Pagination, Navigation]}
         navigation={{
           prevEl: ".mainSlider1_left",
@@ -69,9 +69,7 @@ export default function App() {
           },
         }}
         className="mySwiper"
-
       >
-
         {charters &&
           charters.map((charter) => (
             <SwiperSlide key={charter.id}>
@@ -79,14 +77,23 @@ export default function App() {
                 <div className="image">
                   <img src={charter?.image} alt={charter.name} />
                 </div>
-                <div className="text">{charter.name} </div>
+                <div className="info">
+                  <div className="text">
+                    <h1>{charter.name}</h1>
+                  </div>
+                  <TiArrowSortedDown className="arrow_down" />
+                </div>
               </Link>
-              
             </SwiperSlide>
           ))}
-    
-
       </Swiper>
     </div>
   );
+}
+
+{
+  /* <div className="image">
+                  <img src={charter?.image} alt={charter.name} />
+                </div>
+                <div className="text">{charter.name} </div> */
 }

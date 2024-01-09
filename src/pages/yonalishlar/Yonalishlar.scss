@@ -3,3 +3,17 @@
   height: auto;
  
 }
+
+@media screen and (max-width:447px) {
+  .Yonalishlar{
+    margin-top: 6vh;
+  }
+}
+
+@media screen and (min-width:447px) and (max-width:1300px)   {
+  .Yonalishlar{
+    margin-top: 6vh;
+  }
+}
+
+
