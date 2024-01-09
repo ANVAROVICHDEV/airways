@@ -16,6 +16,7 @@ $orange: #ef6a3c;
   align-items: center;
   position: fixed;
   z-index: 5;
+  background-color: white;
 
   .barsclick {
     width: 100%;
@@ -30,7 +31,7 @@ $orange: #ef6a3c;
     z-index: 5;
     // border: 5px solid red;
 
-    .topinfo{
+    .topinfo {
       padding: 17px;
       ul {
         display: flex;
@@ -39,7 +40,7 @@ $orange: #ef6a3c;
         .active {
           color: $orange;
         }
-  
+
         a {
           color: var(--2-darajani-2chisi, #555);
           font-family: Inter;
@@ -236,37 +237,39 @@ $orange: #ef6a3c;
     background-color: #1f1f1f;
 
     .barsclick {
-        padding: 15px;
-      .cantact{
+      padding: 15px;
+      top: 10vh;
+      .cantact {
         height: 300px;
-        p{
+        p {
           font-size: 15px;
         }
 
-        .number{
+        .number {
           font-size: 15px;
           gap: 10px;
           margin-top: -50px;
         }
 
-        .email{
+        .email {
           font-size: 15px;
         }
 
-        button{
+        button {
           margin-top: -30px;
           padding: 0;
           height: 50px;
+          width: 300px;
         }
-        .icons{
+        .icons {
           margin-top: -40px;
 
-          .radio{
+          .radio {
             width: 45px;
             height: 45px;
             font-size: 20px;
+          }
         }
-         }
       }
     }
 
@@ -307,12 +310,9 @@ $orange: #ef6a3c;
         justify-content: center;
         align-items: center;
 
-        
         .cantact {
           width: 400px;
 
-          
-          
           button {
             width: 88%;
           }
@@ -390,7 +390,6 @@ $orange: #ef6a3c;
         display: flex;
         color: white;
         font-size: 20px;
-
       }
 
       button {

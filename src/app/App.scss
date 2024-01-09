@@ -1,3 +1,45 @@
+*{
+	list-style: none;
+	text-decoration: none;
+}
+
 .app {
 	overflow: hidden;
+
+	.main{
+		margin-top: 2vh;
+	}
+}
+
+@media screen and (max-width:447px) {
+	.app{
+		.main{
+			margin-top: 8vh;
+		}
+	}
+}
+
+
+@media screen and (min-width:447px) and (max-width:769px) {
+	.app{
+		.main{
+			margin-top: 8vh;
+		}
+	}
+}
+
+@media screen and (min-width:769px) and (max-width:990px) {
+	.app{
+		.main{
+			margin-top: 8vh;
+		}
+	}
+}
+
+@media screen and (min-width:1200px) {
+	.app{
+		.main{
+			margin-top: 8vh;
+		}
+	}
 }

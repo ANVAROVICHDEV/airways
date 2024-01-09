@@ -17,27 +17,27 @@ const Navbar = () => {
 				<div className="topinfo">
 					<ul>
 						<li>
-							<NavLink to={"/"}>Asosiy</NavLink>
+							<NavLink onClick={() => setBarscart(!barscart)} to={"/"}>Asosiy</NavLink>
 						</li>
 
 						<li>
-							<NavLink to={"/Yonalishlar"}>Yo’nalishlar</NavLink>
+							<NavLink onClick={() => setBarscart(!barscart)} to={"/Yonalishlar"}>Yo’nalishlar</NavLink>
 						</li>
 
 						<li>
-							<NavLink to={"/Charter_reyslar"}>Charter reyslar</NavLink>
+							<NavLink onClick={() => setBarscart(!barscart)} to={"/Charter_reyslar"}>Charter reyslar</NavLink>
 						</li>
 
 						<li>
-							<NavLink to={"/Qoidalar"}>Ro’yxatdan o’tish qoidalari</NavLink>
+							<NavLink onClick={() => setBarscart(!barscart)} to={"/Qoidalar"}>Ro’yxatdan o’tish qoidalari</NavLink>
 						</li>
 
 						<li>
-							<NavLink to={"/Yangiliklar"}>Yangiliklar</NavLink>
+							<NavLink onClick={() => setBarscart(!barscart)} to={"/Yangiliklar"}>Yangiliklar</NavLink>
 						</li>
 
 						<li>
-							<NavLink to={"/Biz_xaqimizda"}>Biz xaqimizda</NavLink>
+							<NavLink onClick={() => setBarscart(!barscart)} to={"/Biz_xaqimizda"}>Biz xaqimizda</NavLink>
 						</li>
 					</ul>
 

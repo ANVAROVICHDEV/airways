@@ -18,7 +18,8 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      <Routes>
+        <div className="main">
+        <Routes>
         <Route path="/" element={<Asosiy />} />
         <Route path="/Yonalishlar" element={<Yonalishlar />} />
         <Route path="/Charter_reyslar" element={<Charter_reyslar/>} />
@@ -28,6 +29,7 @@ function App() {
         <Route path="/Yangiliklar_ichi/:slug" element={<Yangiliklar_ichi />} />
         <Route path="/All_box" element={<Allbox />} />
       </Routes>
+        </div>
       <Footer />
     </div>
   );
