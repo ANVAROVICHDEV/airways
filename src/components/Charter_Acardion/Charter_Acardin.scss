@@ -9,3 +9,177 @@ $background-color_2: transparent;
   box-sizing: border-box;
 }
 
+.Acardion {
+  width: 100%;
+  min-height: 300px;
+  padding: 30px 190px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+  .Full {
+    width: 500px;
+    min-height: 100px;
+    margin: 10px 0;
+    .Acardion_button {
+      width: 100%;
+      height: 110px;
+      padding: 17px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 18px;
+      border: 2px solid var(--3darajali, #ededed);
+      background: var(--5-assosiy, #fbfbfb);
+
+      .img {
+        width: 26%;
+        height: 100%;
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      .right {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .text {
+          width: 200px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .radio {
+          width: 45px;
+          height: 45px;
+          border-radius: 12px;
+          border-radius: 16px;
+          border: 1px solid var(--3darajali, #ededed);
+          background: #f9f9f9;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+
+          .arrow{
+            color: #ef6a3c;
+
+            &.active{
+                transform: rotate(180deg);
+                transition: all .2s linear;
+            }
+          }
+
+        
+        }
+      }
+    }
+    .Acardion_text {
+      width: 100%;
+      border-radius: 16px;
+      background: var(--5-assosiy, #FBFBFB);
+
+      height: 0px;
+      padding: 0px;
+      margin-top: 7px;
+      overflow: hidden;
+
+      &.active {
+        overflow-y: scroll;
+        min-height: 80px;
+      padding: 10px;
+
+      transition:  all .4s linear;
+      border: 1px solid var(--3darajali, #EDEDED);
+
+
+      }
+
+      .data {
+        width: 100%;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px;
+
+        &:hover {
+          .name {
+            h3 {
+              color: #ef6a3c;
+            }
+          }
+          .right button {
+            background-color: #ef6a3c;
+            color: white;
+          }
+        }
+        .name {
+          width: 45%;
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+
+          h3 {
+            .icon {
+              font-size: 13px;
+            }
+          }
+        }
+
+        .right {
+          width: 55%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          button {
+            display: inline-flex;
+            padding: 10px 26px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 12px;
+
+            background-color: transparent;
+            border: 1px solid #ef6a3c;
+            color: #ef6a3c;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

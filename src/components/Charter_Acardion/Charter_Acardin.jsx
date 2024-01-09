@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Charter_Acardin.scss";
+import { TiArrowSortedUp } from "react-icons/ti";
+import { FaChevronRight } from "react-icons/fa6";
 import { ApiService } from "../../service/api.service";
-import { Accordion, AccordionDetails, AccordionSummary, Stack } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Stack,
+} from "@mui/material";
 import { Typography } from "antd";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Charter_Acardin = () => {
   //////////////////////////////////////
@@ -28,59 +33,78 @@ const Charter_Acardin = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const [num , setNum] = useState(1)
+  const [num, setNum] = useState(1);
+  const [buttonClick, setButtonClick] = useState(false);
+  const [charterid , setCharterid] = useState()
+  const handlebutton = (id) =>{
+    setButtonClick(!buttonClick)
+    setCharterid(id)
+  }
 
   return (
-    <Stack
-      direction={"row"}
-      flexWrap={"wrap"}
-      justifyContent={"center"}
-      gap={"30px"}
-      mt={5}
-    >
+    <div className="Acardion">
+   
+
       {charterss &&
-        charterss.map((charters , idx) => (
-          <Accordion
-            expanded={expanded === `panel${idx + 1}`}
-            onChange={handleChange(`panel${idx + 1}`)}
-			key={charters.id}
-			sx={{h}}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1bh-content"
-              id="panel1bh-header"
-            >
-              <Typography sx={{ width: "33%", flexShrink: 0 }}>
-                General settings
-              </Typography>
-              <Typography sx={{ color: "text.secondary" }}>
-                I am an accordion
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails sx={{width:'500px'}}>
-			{
-				charters.charters.length > 0 ? charters.charters.map((item) => (
-					<Stack
-					  direction={"row"}
-					  justifyContent={"space-between"}
-					  alignItems={"center"}
-					>
-					  <Stack direction={"row"} alignItems={"center"} gap={'30px'}>
-						<h3>{item.city}  </h3>
-					   
-					  </Stack>
-					  <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
-						<p>{item.date}</p>
-						<button>{item.price}</button>
-					  </Stack>
-					</Stack>
-				  )):<h1>No data</h1>
-			}
-            </AccordionDetails>
-          </Accordion>
-        ))}
-    </Stack>
+        charterss.map(
+          (charters) => (
+            (
+              <div className="Full" key={charters.id}>
+                <button
+                  onClick={() => handlebutton(charters.id)}
+                  className="Acardion_button"
+                >
+                  <div className="img">
+                    <img src={charters.image} alt="" />
+                  </div>
+                  <div className="right">
+                    <div className="text">
+                      <h2>{charters.name}</h2>
+                    </div>
+                    <div className="radio ">
+                      <TiArrowSortedUp
+                        className={buttonClick ? "arrow active" : "arrow"}
+                      />
+                    </div>
+                  </div>
+                </button>
+
+                {charters.charters.length ? (
+                  charters.charters.map((iteam) => (
+                    console.log(iteam),
+                    <div
+                      className={
+                        charterid === charters.id && buttonClick ? "Acardion_text active" : "Acardion_text"
+                      }
+                      key={iteam.id}
+                    >
+                      <div className="data">
+                        <div className="name">
+                          <h3>
+                            {iteam.city}
+                          </h3>
+                        </div>
+                        <div className="right">
+                          <div className="time">
+                            <p>{iteam.date}</p>
+                          </div>
+                          <div className="price">
+                            <button>{iteam.price}</button>
+                          </div>
+                        </div>
+                      </div>
+                     
+                    </div>
+                  ))
+                ) : (
+                  ""
+                )}
+              </div>
+            )
+          )
+        )}
+    </div>
+
   );
 };
 
