@@ -14,19 +14,21 @@ $orange: #ef6a3c;
   justify-content: space-between;
   padding: 0px 100px;
   align-items: center;
-  position: relative;
+  position: fixed;
+  z-index: 5;
 
   .barsclick {
     width: 100%;
-    min-height: 150vh;
-    position: absolute;
+    min-height: auto !important;
+    position: fixed;
     bottom: 0;
     padding: 30px 30px;
-    top: 58px;
+    top: 75px;
     right: -100%;
     transition: all 0.3s linear;
     background-color: white;
     z-index: 5;
+    // border: 5px solid red;
 
     .topinfo{
       padding: 17px;
@@ -57,7 +59,7 @@ $orange: #ef6a3c;
         border: 1px solid var(--4d-2-chi, #f1f1f1);
         padding: 7px;
         outline: none;
-        margin-top: 10px;
+        margin: 20px;
       }
     }
     .cantact {
@@ -388,6 +390,7 @@ $orange: #ef6a3c;
         display: flex;
         color: white;
         font-size: 20px;
+
       }
 
       button {

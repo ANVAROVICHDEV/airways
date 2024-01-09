@@ -76,7 +76,7 @@ const Charter_Acardin = () => {
                 </div>
 				
               ))}
-			  <div className="Direction" >
+			  {/* <div className="Direction" >
                   <div className="Direction_text">
                     <h3>item.city </h3>
                   </div>
@@ -102,7 +102,7 @@ const Charter_Acardin = () => {
                     <p>item.date</p>
                     <button>item.price</button>
                   </div>
-                </div>
+                </div> */}
             </div>
           </div>
         ))}

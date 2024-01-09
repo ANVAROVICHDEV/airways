@@ -10,7 +10,6 @@ import moment from "moment";
 import { v4 as uuidv4 } from "uuid";
 
 const AsosiyYonalishlar = () => {
-  const [realTime, setRealTime] = useState(moment().format('YYYY-MM-DD'))
 	const [directions, setDirections] = useState([]);
 	const [code, setCode] = useState();
 	const { token } = theme.useToken();
@@ -41,11 +40,10 @@ const AsosiyYonalishlar = () => {
     getData();
   }, []);
 
-  console.log(directions);
 
   const onPanelChange = async (value) => {
     
-    console.log(value.format("YYYY-MM-DD"));
+    // console.log(value.format("YYYY-MM-DD"));
     const f = code?.from_code; // Replace with the actual IATA code for departure
     const t = code?.to_code; // Replace with the actual IATA code for arrival
     const inp = value.format("YYYY-MM-DD"); // Replace with the actual departure date in the format 'YYYY-MM-DD'

@@ -37,7 +37,7 @@ const Boxes = () => {
   }, []);
 
   const onPanelChange = async (value) => {
-    directions && directions.map((item) => setCode(item));
+    // directions && directions.map((item) => setCode(item));
 
     const f = code.from_code; // Replace with the actual IATA code for departure
     const t = code.to_code; // Replace with the actual IATA code for arrival
@@ -133,7 +133,10 @@ const Boxes = () => {
                     </div>
                   </div>
                   <div className="botton">
-                    <button onClick={() => changeid(direction.id)}>
+                    <button onClick={() => {
+                      changeid(direction.id)
+                      setCode(direction)
+                    }}>
                       Qidirish
                     </button>
                   </div>
