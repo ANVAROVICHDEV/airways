@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Charter_Acardin.scss";
 import { ApiService } from "../../service/api.service";
-import { Accordion, AccordionDetails, AccordionSummary, Stack } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Stack,
+} from "@mui/material";
 import { Typography } from "antd";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Charter_Acardin = () => {
   //////////////////////////////////////
@@ -28,7 +31,7 @@ const Charter_Acardin = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const [num , setNum] = useState(1)
+  const [num, setNum] = useState(1);
 
   return (
     <Stack
@@ -39,12 +42,11 @@ const Charter_Acardin = () => {
       mt={5}
     >
       {charterss &&
-        charterss.map((charters , idx) => (
+        charterss.map((charters, idx) => (
           <Accordion
             expanded={expanded === `panel${idx + 1}`}
             onChange={handleChange(`panel${idx + 1}`)}
-			key={charters.id}
-			sx={{h}}
+            key={charters.id}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -58,25 +60,27 @@ const Charter_Acardin = () => {
                 I am an accordion
               </Typography>
             </AccordionSummary>
-            <AccordionDetails sx={{width:'500px'}}>
-			{
-				charters.charters.length > 0 ? charters.charters.map((item) => (
-					<Stack
-					  direction={"row"}
-					  justifyContent={"space-between"}
-					  alignItems={"center"}
-					>
-					  <Stack direction={"row"} alignItems={"center"} gap={'30px'}>
-						<h3>{item.city}  </h3>
-					   
-					  </Stack>
-					  <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
-						<p>{item.date}</p>
-						<button>{item.price}</button>
-					  </Stack>
-					</Stack>
-				  )):<h1>No data</h1>
-			}
+            <AccordionDetails sx={{ width: "500px" }}>
+              {charters.charters.length > 0 ? (
+                charters.charters.map((item) => (
+                  <Stack
+                    direction={"row"}
+                    justifyContent={"space-between"}
+                    alignItems={"center"}
+                    key={item.id}
+                  >
+                    <Stack direction={"row"} alignItems={"center"} gap={"30px"}>
+                      <h3>{item.city} </h3>
+                    </Stack>
+                    <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
+                      <p>{item.date}</p>
+                      <button>{item.price}</button>
+                    </Stack>
+                  </Stack>
+                ))
+              ) : (
+                <h1>No data</h1>
+              )}
             </AccordionDetails>
           </Accordion>
         ))}

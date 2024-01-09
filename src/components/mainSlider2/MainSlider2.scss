@@ -75,7 +75,8 @@ $white: #fff;
             line-height: 140%; /* 22.4px */
             cursor: pointer;
             position: absolute;
-            left: 30px;
+            left: 50%;
+            transform: translateX(-50%);
             bottom: -140%;
             transition: all ease 0.3s;
             &:active {

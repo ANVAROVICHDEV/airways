@@ -11,3 +11,12 @@ scroll-behavior: smooth !important;
     margin-top: 15px;
 }
 
+.main-wrapper{
+    padding-top: 8vh;
+}
+
+@media screen and (max-width:900px) {
+    .main-wrapper{
+        padding-top: 8.1%;
+    }
+}

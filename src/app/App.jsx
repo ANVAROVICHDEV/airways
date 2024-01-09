@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-        <div className="main">
+        <div className="main-wrapper">
         <Routes>
         <Route path="/" element={<Asosiy />} />
         <Route path="/Yonalishlar" element={<Yonalishlar />} />
